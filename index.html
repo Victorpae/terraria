@@ -18,4 +18,68 @@
 <body>
     
 </body>
-</html> 
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Estudante</title>
+</head>
+<body>
+    <h1>Cadastro de Estudante</h1>
+    <form action="/cadastro_estudante" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Livro</title>
+</head>
+<body>
+    <h1>Cadastro de Livro</h1>
+    <form action="/cadastro_livro" method="POST">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+        
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" required><br><br>
+        
+        <label for="ano_publicacao">Ano de Publicação:</label>
+        <input type="number" id="ano_publicacao" name="ano_publicacao" required><br><br>
+        
+        <label for="genero">Gênero:</label>
+        <input type="text" id="genero" name="genero" required><br><br>
+        
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br><br>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros Cadastrados</title>
+</head>
+<body>
+    <h1>Livros Cadastrados</h1>
+    <ul>
+        {% for livro in livros %}
+        <li>{{ livro[1] }} - {{ livro[2] }} ({{ livro[3] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
